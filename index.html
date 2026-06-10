@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You 🎬</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- SCENE 1 -->
+<div id="scene1" class="scene active">
+  <h1 class="fade">Put on your headphones 🎧</h1>
+  <h2 class="fade">I made something for you</h2>
+  <button onclick="startScene2()">Begin</button>
+
+  <audio id="bgm1">
+    <source src="firstsight.mp3" type="audio/mp3">
+  </audio>
+</div>
+
+<!-- SCENE 2 -->
+<div id="scene2" class="scene hidden">
+  <div id="dialogue" class="text"></div>
+
+  <button id="yesBtn" onclick="startPhotos()">YES OR YES 😌</button>
+  <p class="small">Sorry… there’s no “NO” option for you 😌😂</p>
+</div>
+
+<!-- SCENE 3 -->
+<div id="scene3" class="scene hidden">
+  <div class="polaroid" onclick="nextPhoto()">
+    <img id="photo" src="image1.jpg">
+  </div>
+</div>
+
+<!-- AFTER PHOTOS -->
+<div id="afterPhotos" class="scene hidden">
+  <p>Crazy how we created so many beautiful memories in such a short time...</p>
+  <p>I hope we get to create many more 😌</p>
+  <p>Unnaku okay thane 😌</p>
+  <button onclick="sceneCassette()">Continue</button>
+</div>
+
+<!-- SCENE 4 -->
+<div id="scene4" class="scene hidden">
+  <p>Pongal le irukkum milagu...</p>
+  <p>Nee siracha rombe azhagu...</p>
+  <button onclick="sceneMood()">Next</button>
+</div>
+
+<!-- SCENE 5 -->
+<div id="scene5" class="scene hidden">
+  <h2>Okay… enough smiling.</h2>
+</div>
+
+<!-- CASSETTE -->
+<div id="cassetteScene" class="scene hidden">
+  <div class="cassette" onclick="playSong()"></div>
+
+  <p class="small">
+    P.S. I know you love this song… so I want you to listen till the end 💖
+    Since it’s your birthday…
+  </p>
+
+  <button id="continueBtn" onclick="sceneLetter()" style="display:none;">Continue</button>
+
+  <audio id="bgm2">
+    <source src="mundhinam.mp3" type="audio/mp3">
+  </audio>
+</div>
+
+<!-- LETTER -->
+<div id="letterScene" class="scene hidden">
+  <div class="letterBox">
+
+    <img src="image9.jpg" class="side">
+
+    <div id="letterText" class="letter"></div>
+
+    <img src="image10.jpg" class="side">
+
+  </div>
+
+  <button onclick="sceneEnd()">Next</button>
+
+  <audio id="bgm3">
+    <source src="The Metro Proposal.mp3" type="audio/mp3">
+  </audio>
+</div>
+
+<!-- END -->
+<div id="endScene" class="scene hidden">
+  <h3>May Lord Hanuman bless you 🕉️</h3>
+  <p>Always guided. Always safe. Always okay.</p>
+
+  <h3>Laddu na sweet uhh 😌</h3>
+  <h3>Nee siracha cute uhh</h3>
+
+  <button onclick="restart()">Back to Beginning</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
